@@ -4,13 +4,16 @@ const cli = require('meow')(`
     $ hledger-vis
 
   Options:
+    -p, --port=PORT  port number
+    -f, --file=FILE  file to load
+  Options:
     -h, --help       show usage information
     -v, --version    print version info and exit
 `, {
   boolean: ['help', 'version'],
-  string: 'port',
+  string: ['port', 'file'],
   alias: {
-    h: 'help', v: 'version', p: 'port'
+    h: 'help', v: 'version', p: 'port', f: 'file'
   }
 })
 

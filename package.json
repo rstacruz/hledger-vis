@@ -3,8 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "config": {
+    "bfy_options": "-t [ browserify-postcss --plugin postcss-import --plugin postcss-cssnext --inject true ]"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "run-p watch:app watch:js",
+    "watch:app": "nodemon bin/hledger-vis",
+    "watch:js": "watchify -v $npm_package_config_bfy_options lib/app/app.js -o public/assets/script.js",
+    "build": "browserify $npm_package_config_bfy_options lib/app/app.js -o public/assets/script.js"
   },
   "bin": {
     "hledger-vis": "bin/hledger-vis"
@@ -22,7 +29,19 @@
     "jade": "1.11.0",
     "koa": "1.2.1",
     "koa-router": "5.4.0",
+    "koa-static": "2.0.0",
     "koa-views": "4.1.0",
-    "meow": "3.7.0"
+    "meow": "3.7.0",
+    "postcss-import": "8.1.2"
+  },
+  "devDependencies": {
+    "browserify": "13.1.0",
+    "browserify-postcss": "0.3.2",
+    "decca": "2.1.0",
+    "nodemon": "1.10.0",
+    "normalize.css": "4.2.0",
+    "npm-run-all": "2.3.0",
+    "postcss-cssnext": "2.7.0",
+    "watchify": "3.7.0"
   }
 }
