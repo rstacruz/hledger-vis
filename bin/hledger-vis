@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+const cli = require('meow')(`
+  Usage:
+    $ hledger-vis
+
+  Options:
+    -h, --help       show usage information
+    -v, --version    print version info and exit
+`, {
+  boolean: ['help', 'version'],
+  string: 'port',
+  alias: {
+    h: 'help', v: 'version', p: 'port'
+  }
+})
+
+const port = cli.flags.port || process.env['PORT'] || 3000
+
+const app = require('../lib/server')()
+require('http').createServer(app.callback()).listen(port)
+console.log('http://localhost:' + port)

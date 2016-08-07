@@ -6,7 +6,23 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "bin": {
+    "hledger-vis": "bin/hledger-vis"
+  },
+  "keywords": [
+    "hledger",
+    "ledger",
+    "visualization",
+    "accounting"
+  ],
+  "author": "Rico Sta. Cruz <rico@ricostacruz.com>",
+  "license": "MIT",
+  "dependencies": {
+    "hledger": "1.1.1",
+    "jade": "1.11.0",
+    "koa": "1.2.1",
+    "koa-router": "5.4.0",
+    "koa-views": "4.1.0",
+    "meow": "3.7.0"
+  }
 }
