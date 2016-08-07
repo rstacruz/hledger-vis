@@ -31,8 +31,7 @@
     "koa-router": "5.4.0",
     "koa-static": "2.0.0",
     "koa-views": "4.1.0",
-    "meow": "3.7.0",
-    "postcss-import": "8.1.2"
+    "meow": "3.7.0"
   },
   "devDependencies": {
     "browserify": "13.1.0",
@@ -42,6 +41,7 @@
     "normalize.css": "4.2.0",
     "npm-run-all": "2.3.0",
     "postcss-cssnext": "2.7.0",
+    "postcss-import": "8.1.2",
     "watchify": "3.7.0"
   }
 }
