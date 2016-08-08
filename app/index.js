@@ -17,7 +17,7 @@ store.dispatch(init())
  */
 
 function DOM (store) {
-  var render = dom.createRenderer(document.getElementById('app'))
+  var render = dom.createRenderer(document.getElementById('app'), store.dispatch)
 
   function update () {
     var state = store.getState()
@@ -39,9 +39,13 @@ function Router (store) {
     const query = require('qs').parse(window.location.search.slice(1))
     store.dispatch({ type: 'navigate', query })
 
-    // Use --related if it's an account
-    // If it's not (eg, `desc:baguio`), skip it
-    store.dispatch(fetchData({ q: 'reg --related ' + query.q, mode: 'csv', key: 'register' }))
+    // Use `reg --related` if it's an account
+    // If it's not (eg, `desc:baguio`), use `print`
+    store.dispatch(fetchData({
+      q: 'reg --related ' + query.q,
+      mode: 'csv',
+      key: 'register'
+    }))
   })
 
   route.base('/')

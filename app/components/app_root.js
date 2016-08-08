@@ -2,8 +2,9 @@ import { element } from 'decca'
 import get from 'lodash/get'
 import AccountsList from './accounts_list'
 import RegisterList from './register_list'
+import { navigate } from '../actions'
 
-function render ({ props }) {
+function render ({ props, dispatch }) {
   const {state} = props
 
   return <div class='root-layout'>
@@ -14,6 +15,7 @@ function render ({ props }) {
           type='text'
           placeholder='Search...'
           value={get(state, 'context.q')}
+          onKeydown={onKeydown(dispatch)}
           />
       </div>
     </div>
@@ -24,6 +26,19 @@ function render ({ props }) {
       <RegisterList register={get(state, 'register')} />
     </div>
   </div>
+}
+
+/*
+ * On press enter: change the current `q`
+ */
+
+function onKeydown (dispatch) {
+  return e => {
+    if (e.keyCode === 13) {
+      e.target.blur()
+      dispatch(navigate({ q: e.target.value }))
+    }
+  }
 }
 
 module.exports = { render }

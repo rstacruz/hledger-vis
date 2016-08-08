@@ -1,9 +1,12 @@
 import { stringify } from 'qs'
+import buildPath from '../helpers/build_path'
 import fetch from 'isomorphic-fetch'
 import checkStatus from '../helpers/check_status'
 import { toString } from '../accessors/context'
+import get from 'lodash/get'
+import route from 'riot-route'
 
-/*
+/**
  * Fetches ledger data into a given key.
  *
  *     fetchData({ q: 'bal', key: 'balance' })
@@ -40,8 +43,15 @@ function init () {
   }
 }
 
-module.exports = {
-  fetchData,
-  init
+function navigate (ctx) {
+  return (dispatch, getState) => {
+    const path = buildPath(ctx, getState())
+    route(path)
+  }
 }
 
+module.exports = {
+  fetchData,
+  init,
+  navigate
+}
