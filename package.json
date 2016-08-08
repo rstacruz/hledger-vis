@@ -8,10 +8,13 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "run-p watch:app watch:js",
-    "watch:app": "nodemon bin/hledger-vis",
+    "start": "run-p watch:app watch:js watch:css",
+    "watch:app": "nodemon -q --exec \"node bin/hledger-vis --no-open\"",
     "watch:js": "watchify -v $npm_package_config_bfy_options lib/app/app.js -o public/assets/script.js",
-    "build": "browserify $npm_package_config_bfy_options lib/app/app.js -o public/assets/script.js"
+    "watch:css": "nodemon -q --exec \"npm run build:css\" -e scss",
+    "build": "run-s build:js build:css",
+    "build:js": "browserify $npm_package_config_bfy_options lib/app/app.js -o public/assets/script.js",
+    "build:css": "node-sass assets/css/style.scss | postcss -u autoprefixer > public/assets/style.css"
   },
   "bin": {
     "hledger-vis": "bin/hledger-vis"
@@ -34,14 +37,16 @@
     "meow": "3.7.0"
   },
   "devDependencies": {
+    "autoprefixer": "6.4.0",
     "browserify": "13.1.0",
-    "browserify-postcss": "0.3.2",
     "decca": "2.1.0",
+    "node-sass": "3.8.0",
     "nodemon": "1.10.0",
     "normalize.css": "4.2.0",
     "npm-run-all": "2.3.0",
     "postcss-cssnext": "2.7.0",
     "postcss-import": "8.1.2",
+    "redux": "3.5.2",
     "watchify": "3.7.0"
   }
 }
