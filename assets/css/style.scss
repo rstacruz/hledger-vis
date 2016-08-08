@@ -1,13 +1,25 @@
 @import '../../node_modules/normalize.css/normalize';
 
 $sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$black: #111;
 $line-color: rgba(#8090a0, .1);
+$gray-text: #708090;
 $text-color: #404050;
 $nav-height: 48px;
+$sidebar-width: 256px;
 
 @mixin antialias {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+    zoom: 1;
+  }
 }
 
 html, body, #app {
@@ -43,14 +55,14 @@ body {
     top: $nav-height;
     left: 0;
     bottom: 0;
-    width: 200px;
+    width: $sidebar-width;
     padding: 16px;
   }
 
   > .body {
     position: absolute;
     top: $nav-height;
-    left: 200px;
+    left: $sidebar-width;
     right: 0;
     bottom: 0;
     padding: 16px;
@@ -84,6 +96,49 @@ body {
 .account-link {
   display: block;
   text-decoration: none;
+
+  &, &:visited {
+    color: $text-color;
+    @include clearfix;
+  }
+
+  > .label,
+  > .balance {
+    white-space: nowrap;
+    height: 24px;
+    line-height: 24px;
+    text-overflow: ellipsis;
+  }
+
+  > .label {
+    float: left;
+    max-width: 60%;
+  }
+
+  > .balance {
+    float: right;
+    font-size: .86em;
+    font-weight: normal;
+    color: $gray-text;
+    max-width: 60%;
+    text-align: right;
+  }
+}
+
+.account-link.-level-1 {
+  font-weight: bold;
+  margin-top: 1.5em;
+
+  &, &:visited {
+    color: $black;
+  }
+}
+
+.account-link.-level-3 {
+  > .label:before {
+    content: '-';
+    margin-right: .5em;
+  }
 }
 
 .register-table {
