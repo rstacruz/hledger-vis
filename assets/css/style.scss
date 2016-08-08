@@ -1,12 +1,14 @@
 @import '../../node_modules/normalize.css/normalize';
 
 $sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$accent: #35a;
 $black: #111;
 $line-color: rgba(#8090a0, .1);
 $gray-text: #708090;
 $text-color: #404050;
-$nav-height: 48px;
+$nav-height: 56px;
 $sidebar-width: 256px;
+$small: 12px;
 
 @mixin antialias {
   -webkit-font-smoothing: antialiased;
@@ -79,6 +81,40 @@ body {
   border-bottom: solid 1px $line-color;
   height: $nav-height;
   line-height: $nav-height;
+
+  > .center {
+    text-align: center;
+  }
+
+  > .center > input {
+    position: relative;
+    top: -1px;
+  }
+}
+
+.main-search {
+  background: $line-color;
+  border: 0;
+  padding: 0 12px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 4px;
+  font-size: $small;
+  font-weight: bold;
+  box-shadow: 1px 1px 0 rgba($text-color, .15);
+
+  &:placeholder {
+    font-weight: normal;
+  }
+
+  &:focus {
+    background: white;
+    outline: 0;
+    box-shadow: 0 0 1px $accent, 0 0 4px rgba($accent, .2);
+  }
 }
 
 .main-sidebar {
@@ -108,6 +144,7 @@ body {
     height: 24px;
     line-height: 24px;
     text-overflow: ellipsis;
+    pointer-events: none;
   }
 
   > .label {
