@@ -55,6 +55,12 @@
     "redux": "3.5.2",
     "watchify": "3.7.0"
   },
+  "files": [
+    "public",
+    "lib",
+    "bin",
+    "views"
+  ],
   "homepage": "https://github.com/rstacruz/hledger-vis#readme",
   "keywords": [
     "accounting",
