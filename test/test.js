@@ -19,16 +19,16 @@ test('Query.toQuery', t => {
 
 test('Query.normalize', t => {
   t.deepEqual(
-    normalize('acct:Assets'),
+    normalize({q: 'acct:Assets'}),
     'acct:Assets')
   t.deepEqual(
-    normalize('not:Assets'),
+    normalize({q: 'not:Assets'}),
     'not:Assets')
   t.deepEqual(
-    normalize('not:acct:Assets'),
+    normalize({q: 'not:acct:Assets'}),
     'not:acct:Assets')
   t.deepEqual(
-    normalize('Assets'),
+    normalize({q: 'Assets'}),
     'Assets')
   t.end()
 })
