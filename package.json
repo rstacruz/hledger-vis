@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "config": {
-    "bfy_options": "-t [ browserify-postcss --plugin postcss-import --plugin postcss-cssnext --inject true ]"
+    "bfy_options": "-t babelify"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,6 +15,20 @@
     "build": "run-s build:js build:css",
     "build:js": "browserify $npm_package_config_bfy_options lib/app/app.js -o public/assets/script.js",
     "build:css": "node-sass assets/css/style.scss | postcss -u autoprefixer > public/assets/style.css"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "syntax-jsx",
+      [
+        "transform-react-jsx",
+        {
+          "pragma": "element"
+        }
+      ]
+    ]
   },
   "bin": {
     "hledger-vis": "bin/hledger-vis"
@@ -38,8 +52,13 @@
   },
   "devDependencies": {
     "autoprefixer": "6.4.0",
+    "babel-plugin-syntax-jsx": "6.13.0",
+    "babel-plugin-transform-react-jsx": "6.8.0",
+    "babel-preset-es2015": "6.13.2",
+    "babelify": "7.3.0",
     "browserify": "13.1.0",
     "decca": "2.1.0",
+    "lodash": "4.14.1",
     "node-sass": "3.8.0",
     "nodemon": "1.10.0",
     "normalize.css": "4.2.0",
