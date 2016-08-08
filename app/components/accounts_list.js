@@ -13,9 +13,7 @@ function render ({ props, context }) {
     || renderList(balance, context)
 }
 
-function renderList (balance, ctx) {
-  const items = balance.slice(1)
-
+function renderList (items, ctx) {
   return <div class='accounts-list'>
     {map(items, a => <li>{renderLink(a, ctx)}</li>)}
   </div>

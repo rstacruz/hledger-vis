@@ -17,6 +17,7 @@ function fetchData (options) {
   const query = { q: toString(ctx), mode: options.mode }
   const queryString = stringify(query)
   const uri = '/hledger?' + queryString
+  const transform = options.pipe || (d => d)
 
   return dispatch => {
     dispatch({ type: 'fetch:start', key: options.key })
@@ -24,6 +25,7 @@ function fetchData (options) {
     fetch(uri)
     .then(checkStatus)
     .then(res => res.json())
+    .then(transform)
     .then(data => {
       dispatch({ type: 'fetch:done', payload: data, key: options.key })
     })
@@ -39,9 +41,32 @@ function fetchData (options) {
 
 function init () {
   return dispatch => {
-    dispatch(fetchData({ q: 'bal --no-total', mode: 'csv', key: 'balance' }))
+    dispatch(fetchData({
+      q: 'bal --no-total',
+      mode: 'csv',
+      key: 'balance',
+      pipe: fixBalance
+    }))
   }
 }
+
+function fixBalance (bal) {
+  bal = bal.slice(1) // Remove CSV header
+
+  // bal = bal.reduce((acc, item) => {
+  //   acc.push(item)
+  //   return acc
+  // }, [])
+
+  return bal
+}
+
+/*
+ * Navigates to a different URL.
+ * (Doesn't actually do anything in the store)
+ *
+ *     store.dispatch(navigate({ q: 'Assets:Cash' }))
+ */
 
 function navigate (ctx) {
   return (dispatch, getState) => {
