@@ -1,21 +1,8 @@
 {
   "name": "hledger-vis",
+  "description": "Web UI for hledger",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "config": {
-    "bfy_options": "-t babelify"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "run-p watch:app watch:js watch:css",
-    "watch:app": "nodemon -q --exec \"node bin/hledger-vis --no-open\"",
-    "watch:js": "watchify -v $npm_package_config_bfy_options lib/app/app.js -o public/assets/script.js",
-    "watch:css": "nodemon -q --exec \"npm run build:css\" -e scss",
-    "build": "run-s build:js build:css",
-    "build:js": "browserify $npm_package_config_bfy_options lib/app/app.js -o public/assets/script.js",
-    "build:css": "node-sass assets/css/style.scss | postcss -u autoprefixer > public/assets/style.css"
-  },
+  "author": "Rico Sta. Cruz <rico@ricostacruz.com>",
   "babel": {
     "presets": [
       "es2015"
@@ -33,14 +20,12 @@
   "bin": {
     "hledger-vis": "bin/hledger-vis"
   },
-  "keywords": [
-    "hledger",
-    "ledger",
-    "visualization",
-    "accounting"
-  ],
-  "author": "Rico Sta. Cruz <rico@ricostacruz.com>",
-  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rstacruz/hledger-vis/issues"
+  },
+  "config": {
+    "bfy_options": "-t babelify"
+  },
   "dependencies": {
     "hledger": "1.1.1",
     "jade": "1.11.0",
@@ -67,5 +52,28 @@
     "postcss-import": "8.1.2",
     "redux": "3.5.2",
     "watchify": "3.7.0"
+  },
+  "homepage": "https://github.com/rstacruz/hledger-vis#readme",
+  "keywords": [
+    "accounting",
+    "hledger",
+    "ledger",
+    "visualization"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rstacruz/hledger-vis.git"
+  },
+  "scripts": {
+    "build": "run-s build:js build:css",
+    "build:css": "node-sass assets/css/style.scss | postcss -u autoprefixer > public/assets/style.css",
+    "build:js": "browserify $npm_package_config_bfy_options lib/app/index.js -o public/assets/script.js",
+    "start": "run-p watch:app watch:js watch:css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:app": "nodemon -q --exec \"node bin/hledger-vis --no-open\"",
+    "watch:css": "nodemon -q --exec \"npm run build:css\" -e scss",
+    "watch:js": "watchify -v $npm_package_config_bfy_options lib/app/index.js -o public/assets/script.js"
   }
 }
