@@ -10,15 +10,26 @@ const cli = require('meow')(`
     -h, --help       show usage information
     -v, --version    print version info and exit
 `, {
-  boolean: ['help', 'version'],
+  boolean: ['help', 'version', 'open'],
   string: ['port', 'file'],
   alias: {
     h: 'help', v: 'version', p: 'port', f: 'file'
   }
 })
 
-const port = cli.flags.port || process.env['PORT'] || 3000
+const port = cli.flags.port || process.env['PORT'] || require('get-port')()
 
 const app = require('../lib/server')()
-require('http').createServer(app.callback()).listen(port)
-console.log('http://localhost:' + port)
+
+Promise.resolve(port)
+.then(port => {
+  const url = 'http://localhost:' + port
+  require('http').createServer(app.callback()).listen(port)
+
+  if (cli.flags.open === false) {
+    console.log('=> ' + url)
+  } else {
+    require('open')(url)
+  }
+})
+

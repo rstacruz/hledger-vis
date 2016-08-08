@@ -27,13 +27,15 @@
     "bfy_options": "-t babelify"
   },
   "dependencies": {
+    "get-port": "2.1.0",
     "hledger": "1.1.1",
     "jade": "1.11.0",
     "koa": "1.2.1",
     "koa-router": "5.4.0",
     "koa-static": "2.0.0",
     "koa-views": "4.1.0",
-    "meow": "3.7.0"
+    "meow": "3.7.0",
+    "open": "0.0.5"
   },
   "devDependencies": {
     "autoprefixer": "6.4.0",
@@ -72,7 +74,7 @@
     "build:js": "browserify $npm_package_config_bfy_options lib/app/index.js -o public/assets/script.js",
     "start": "run-p watch:app watch:js watch:css",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:app": "nodemon -q --exec \"node bin/hledger-vis --no-open\"",
+    "watch:app": "nodemon -q --exec \"node bin/hledger-vis --no-open --port ${PORT:=3000}\"",
     "watch:css": "nodemon -q --exec \"npm run build:css\" -e scss",
     "watch:js": "watchify -v $npm_package_config_bfy_options lib/app/index.js -o public/assets/script.js"
   }
