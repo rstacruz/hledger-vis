@@ -127,6 +127,10 @@ body {
     margin: 0;
     padding: 0;
   }
+
+  > li:first-child > * {
+    margin-top: 0;
+  }
 }
 
 .account-link {
