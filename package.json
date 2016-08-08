@@ -59,6 +59,9 @@
     "redux": "3.5.2",
     "redux-thunk": "2.1.0",
     "riot-route": "2.4.0",
+    "shell-quote": "1.6.1",
+    "tape": "4.6.0",
+    "tape-watch": "2.1.0",
     "uglify-js": "2.7.0",
     "watchify": "3.7.0"
   },
@@ -86,7 +89,7 @@
     "build:css": "node-sass assets/css/style.scss --output-style=compressed | postcss -u autoprefixer > public/assets/style.css",
     "build:js": "browserify $npm_package_config_bfy_options lib/app/index.js | uglifyjs -cm > public/assets/script.js",
     "start": "run-p -sl watch:app watch:js watch:css",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "tape test/**/*.js",
     "watch:app": "nodemon -q --exec \"node bin/hledger-vis --no-open --port ${PORT:=3000}\"",
     "watch:css": "nodemon -q --exec \"run-s -s build:css && ls -la public/assets/style.css\" -e scss",
     "watch:js": "watchify -v $npm_package_config_bfy_options lib/app/index.js -o public/assets/script.js"
