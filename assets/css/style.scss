@@ -3,14 +3,14 @@
 $sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 $line-color: rgba(#8090a0, .1);
 $text-color: #404050;
-$nav-height: 40px;
+$nav-height: 48px;
 
 @mixin antialias {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body {
+html, body, #app {
   height: 100%;
 }
 
@@ -20,6 +20,9 @@ body {
   color: $text-color;
   line-height: 1.5;
   @include antialias;
+}
+
+* {
   box-sizing: border-box;
 }
 
@@ -41,6 +44,7 @@ body {
     left: 0;
     bottom: 0;
     width: 200px;
+    padding: 16px;
   }
 
   > .body {
@@ -49,6 +53,13 @@ body {
     left: 200px;
     right: 0;
     bottom: 0;
+    padding: 16px;
+  }
+
+  > .side,
+  > .body {
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 
@@ -73,4 +84,17 @@ body {
 .account-link {
   display: block;
   text-decoration: none;
+}
+
+.register-table {
+  width: 100%;
+
+  > thead > tr > th {
+    font-weight: bold;
+    text-align: left;
+  }
+
+  > * > tr > *:last-child {
+    text-align: right;
+  }
 }
