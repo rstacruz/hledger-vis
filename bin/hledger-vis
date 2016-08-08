@@ -1,12 +1,15 @@
 #!/usr/bin/env node
+const chalk = require('chalk')
 const cli = require('meow')(`
   Usage:
     $ hledger-vis
 
   Options:
     -p, --port=PORT  port number
+        --no-open    don't open in the browser
     -f, --file=FILE  file to load
-  Options:
+
+  Other options:
     -h, --help       show usage information
     -v, --version    print version info and exit
 `, {
@@ -30,7 +33,10 @@ Promise.resolve(port)
   require('http').createServer(app.callback()).listen(port)
 
   if (cli.flags.open === false) {
-    console.log('=> ' + url)
+    console.log('')
+    console.log(' ' + chalk.green('✓') + ' ' + chalk.bold('hledger-vis started'))
+    console.log('   ' + chalk.underline(url))
+    console.log('')
   } else {
     require('open')(url)
   }
