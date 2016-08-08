@@ -42,6 +42,4 @@ function renderLink (item, ctx) {
   </a>
 }
 
-
-
 module.exports = { render }
