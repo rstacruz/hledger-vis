@@ -29,6 +29,14 @@ function toQuery (ctx) {
 }
 
 /*
+ * Normalizes a context.
+ */
+
+function normalize (ctx) {
+  return toString(toQuery(ctx))
+}
+
+/*
  * Converts a query to a string.
  */
 
@@ -42,14 +50,6 @@ function toString (query) {
       return q.key + ':' + quote(q.value)
     }
   }).join(' ')
-}
-
-/*
- * Normalizes a context.
- */
-
-function normalize (ctx) {
-  return toString(toQuery(ctx))
 }
 
 /*

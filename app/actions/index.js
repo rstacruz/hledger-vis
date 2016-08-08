@@ -1,6 +1,7 @@
 import { stringify } from 'qs'
 import fetch from 'isomorphic-fetch'
 import checkStatus from '../helpers/check_status'
+import { normalize } from '../accessors/query'
 
 /*
  * Fetches ledger data into a given key.
@@ -9,7 +10,8 @@ import checkStatus from '../helpers/check_status'
  */
 
 function fetchData (options) {
-  const query = { q: options.q, mode: options.mode }
+  const ctx = { q: options.q }
+  const query = { q: normalize(ctx), mode: options.mode }
   const queryString = stringify(query)
   const uri = '/hledger?' + queryString
 

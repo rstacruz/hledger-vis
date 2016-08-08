@@ -66,6 +66,7 @@
     "watchify": "3.7.0"
   },
   "files": [
+    "app",
     "public",
     "lib",
     "bin",
@@ -87,11 +88,11 @@
   "scripts": {
     "build": "run-p -sl build:js build:css",
     "build:css": "node-sass assets/css/style.scss --output-style=compressed | postcss -u autoprefixer > public/assets/style.css",
-    "build:js": "browserify $npm_package_config_bfy_options lib/app/index.js | uglifyjs -cm > public/assets/script.js",
+    "build:js": "browserify $npm_package_config_bfy_options app/index.js | uglifyjs -cm > public/assets/script.js",
     "start": "run-p -sl watch:app watch:js watch:css",
     "test": "tape test/**/*.js",
     "watch:app": "nodemon -q --exec \"node bin/hledger-vis --no-open --port ${PORT:=3000}\"",
     "watch:css": "nodemon -q --exec \"run-s -s build:css && ls -la public/assets/style.css\" -e scss",
-    "watch:js": "watchify -v $npm_package_config_bfy_options lib/app/index.js -o public/assets/script.js"
+    "watch:js": "watchify -v $npm_package_config_bfy_options app/index.js -o public/assets/script.js"
   }
 }

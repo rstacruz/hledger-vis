@@ -1,5 +1,5 @@
 const test = require('tape')
-const Query = require('../lib/accessors/query')
+const Query = require('../app/accessors/query')
 const toQuery = Query.toQuery
 const normalize = Query.normalize
 
