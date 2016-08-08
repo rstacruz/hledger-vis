@@ -2,20 +2,15 @@ import { element } from 'decca'
 import map from 'lodash/map'
 import reroute from '../helpers/reroute'
 import buildPath from '../helpers/build_path'
+import loader from '../helpers/loader'
 import c from 'classnames'
 import {stringify} from 'qs'
 
 function render ({ props, context }) {
   const {balance} = props
-  if (!balance) {
-    return <noscript />
-  } else if (balance._error) {
-    return <div>Error: {balance._error.message}</div>
-  } else if (balance._pending) {
-    return <div>Loading...</div>
-  } else {
-    return renderList(balance, context)
-  }
+
+  return loader(balance)
+    || renderList(balance, context)
 }
 
 function renderList (balance, ctx) {

@@ -1,18 +1,13 @@
 import { element } from 'decca'
 import map from 'lodash/map'
 import reverse from 'lodash/fp/reverse'
+import loader from '../helpers/loader'
 
 function render ({ props }) {
   const {register} = props
-  if (!register) {
-    return <noscript />
-  } else if (register._error) {
-    return <div>Error: {register._error.message}</div>
-  } else if (register._pending) {
-    return <div>Loading...</div>
-  } else {
-    return renderList({ props })
-  }
+
+  return loader(register)
+    || renderList({ props })
 }
 
 function renderList ({ props }) {
