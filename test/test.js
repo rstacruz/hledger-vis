@@ -1,9 +1,9 @@
 const test = require('tape')
-const Query = require('../app/accessors/query')
-const toQuery = Query.toQuery
-const normalize = Query.normalize
+const Context = require('../app/accessors/context')
+const toQuery = Context.toQuery
+const toString = Context.toString
 
-test('Query.toQuery', t => {
+test('Context.toQuery', t => {
   t.deepEqual(toQuery({q: 'acct:Assets'}), [
     { type: 'key', key: 'acct', value: 'Assets' }
   ])
@@ -17,18 +17,18 @@ test('Query.toQuery', t => {
   t.end()
 })
 
-test('Query.normalize', t => {
+test('Context.toString', t => {
   t.deepEqual(
-    normalize({q: 'acct:Assets'}),
+    toString({q: 'acct:Assets'}),
     'acct:Assets')
   t.deepEqual(
-    normalize({q: 'not:Assets'}),
+    toString({q: 'not:Assets'}),
     'not:Assets')
   t.deepEqual(
-    normalize({q: 'not:acct:Assets'}),
+    toString({q: 'not:acct:Assets'}),
     'not:acct:Assets')
   t.deepEqual(
-    normalize({q: 'Assets'}),
+    toString({q: 'Assets'}),
     'Assets')
   t.end()
 })
