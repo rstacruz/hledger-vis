@@ -6,7 +6,7 @@
 
 ```sh
 npm install -g @rstacruz/hledger-vis
-hledger-vis
+hledger vis
 ```
 
 ## Dev setup
@@ -23,6 +23,12 @@ hledger-vis
 
   ```sh
   npm start
+  ```
+
+* Make it available globally (optional):
+
+  ```sh
+  npm link
   ```
 
 ## Thanks
