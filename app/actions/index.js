@@ -42,7 +42,7 @@ function fetchData (options) {
 function init () {
   return dispatch => {
     dispatch(fetchData({
-      q: 'bal --no-total',
+      q: 'bal --no-total --no-elide',
       mode: 'csv',
       key: 'balance',
       pipe: fixBalance
