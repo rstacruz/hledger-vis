@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const chalk = require('chalk')
+const hledger = require('hledger')
 const stringifyOptions = require('../lib/helpers/stringify_options')
 
 const PASSTHRU = {
@@ -89,13 +90,12 @@ if (cli.flags.debug) {
     (process.env.DEBUG || '') + ',hledger-vis'
 }
 
-const port = cli.flags.port || process.env['PORT'] || require('get-port')()
-
 const app = require('../lib/server')({
   options: stringifyOptions(PASSTHRU, cli.flags)
 })
 
-Promise.resolve(port)
+hledger('--version', { mode: 'list' })
+.then(_ => getPort(cli.flags.port))
 .then(port => {
   const url = 'http://localhost:' + port
   require('http').createServer(app.callback()).listen(port)
@@ -109,3 +109,17 @@ Promise.resolve(port)
     require('open')(url)
   }
 })
+.catch(err => {
+  console.log(' ' + chalk.red('✗') + ' ' + err.message.replace(/\n/g, '\n   '))
+})
+
+
+/*
+ * Returns a Promise that resolves into a port number.
+ */
+
+function getPort (port) {
+  if (port) return Promise.resolve(port)
+  if (process.env.PORT) return Promise.resolve(process.env.PORT)
+  return require('get-port')()
+}
