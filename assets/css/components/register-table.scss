@@ -1,0 +1,13 @@
+.register-table {
+  width: 100%;
+
+  > thead > tr > th {
+    font-weight: bold;
+    text-align: left;
+  }
+
+  > * > tr > *:last-child {
+    text-align: right;
+  }
+}
+

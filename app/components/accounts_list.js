@@ -14,7 +14,7 @@ function render ({ props, context }) {
 }
 
 function renderList (items, ctx) {
-  return <div class='accounts-list'>
+  return <div class='accounts-list _fadein'>
     {map(items, a => <li>{renderLink(a, ctx)}</li>)}
   </div>
 }

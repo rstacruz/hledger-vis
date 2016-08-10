@@ -1,0 +1,49 @@
+.account-link {
+  display: block;
+  text-decoration: none;
+
+  &, &:visited {
+    color: $text-color;
+    @include clearfix;
+  }
+
+  > .label,
+  > .balance {
+    white-space: nowrap;
+    height: 24px;
+    line-height: 24px;
+    text-overflow: ellipsis;
+    pointer-events: none;
+  }
+
+  > .label {
+    float: left;
+    max-width: 60%;
+  }
+
+  > .balance {
+    float: right;
+    font-size: .86em;
+    font-weight: normal;
+    color: $gray-text;
+    max-width: 60%;
+    text-align: right;
+  }
+}
+
+.account-link.-level-1 {
+  font-weight: bold;
+  margin-top: 1.5em;
+
+  &, &:visited {
+    color: $black;
+  }
+}
+
+.account-link.-level-3 {
+  > .label:before {
+    content: '-';
+    margin-right: .5em;
+  }
+}
+

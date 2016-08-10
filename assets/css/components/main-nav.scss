@@ -1,0 +1,15 @@
+.main-nav {
+  border-bottom: solid 1px $line-color;
+  height: $nav-height;
+  line-height: $nav-height;
+
+  > .center {
+    text-align: center;
+  }
+
+  > .center > input {
+    position: relative;
+    top: -1px;
+  }
+}
+

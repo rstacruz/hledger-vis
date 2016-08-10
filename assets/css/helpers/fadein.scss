@@ -1,0 +1,8 @@
+._fadein {
+  animation: fadein 150ms linear;
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 100%; }
+}

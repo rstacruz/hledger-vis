@@ -1,0 +1,36 @@
+.root-layout {
+  position: relative;
+  height: 100%;
+
+  > .top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $nav-height;
+  }
+
+  > .side {
+    position: absolute;
+    top: $nav-height;
+    left: 0;
+    bottom: 0;
+    width: $sidebar-width;
+    padding: 16px;
+  }
+
+  > .body {
+    position: absolute;
+    top: $nav-height;
+    left: $sidebar-width;
+    right: 0;
+    bottom: 0;
+    padding: 16px;
+  }
+
+  > .side,
+  > .body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}

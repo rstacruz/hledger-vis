@@ -14,7 +14,7 @@ function renderList ({ props }) {
   const {register} = props
   const head = register.slice(0, 1)
   const body = register.slice(1)
-  return <div class='register-list'>
+  return <div class='register-list _fadein'>
     <table class='register-table'>
       <thead>
         {map(head, row =>

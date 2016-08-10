@@ -1,0 +1,24 @@
+.main-search {
+  background: $line-color;
+  border: 0;
+  padding: 0 12px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 4px;
+  font-size: $small;
+  font-weight: bold;
+  box-shadow: 1px 1px 0 rgba($text-color, .15);
+
+  &:placeholder {
+    font-weight: normal;
+  }
+
+  &:focus {
+    background: white;
+    outline: 0;
+    box-shadow: 0 0 1px $accent, 0 0 4px rgba($accent, .2);
+  }
+}
