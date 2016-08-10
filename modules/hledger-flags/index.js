@@ -3,8 +3,6 @@ var split = require('shell-quote').parse
 var join = require('shell-quote').quote
 
 var OPTIONS = {
-  // This is actually not passed onto minimist, because minimist will just turn
-  // them into `false`. Only here for reference.
   boolean: [
     'ignore-assertions',
     'cleared',
@@ -29,6 +27,10 @@ var OPTIONS = {
     'total', // no-total
     'value'
   ],
+  default: {
+    'elide': true,
+    'total': true
+  },
   string: [
     'file',
     'begin',
@@ -66,7 +68,6 @@ var OPTIONS = {
     'T': 'row-total',
     'N': 'no-total',
     'V': 'value',
-
   },
 
   // Not passed to minimist, but used to array-ify certain keys
@@ -120,7 +121,9 @@ var COMMAND_ALIASES = {
 
 function parse (str) {
   var args = minimist(split(str), {
+    boolean: OPTIONS.boolean,
     string: OPTIONS.string,
+    default: OPTIONS.default,
     alias: OPTIONS.alias
   })
 
@@ -133,6 +136,17 @@ function parse (str) {
   args.command = normalizeCommand(args._[0])
   args.query = args._.slice(1)
   delete args._
+
+  // Undo booleans
+  OPTIONS.boolean.forEach(function (flag) {
+    var val = args[flag]
+    if (!args.hasOwnProperty(flag)) return
+    if ((val === OPTIONS.default[flag]) ||
+      ((val === false) &&
+        (OPTIONS.default[flag] === undefined))) {
+      delete args[flag]
+    }
+  })
 
   // Arrayify some flags (eg, 'alias')
   OPTIONS.array.forEach(function (flag) {

@@ -15,6 +15,13 @@ test('parse', function (t) {
     query: []
   })
 
+  args = parse('--real bal')
+  t.deepEqual(args, {
+    command: 'balance',
+    real: true,
+    query: []
+  })
+
   args = parse('bal Assets')
   t.deepEqual(args, {
     command: 'balance',
