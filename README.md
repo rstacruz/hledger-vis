@@ -4,13 +4,36 @@
 
 ## Usage
 
-No release yet; see [dev setup](#dev-setup) below.
-<!--
-```sh
-npm install -g @rstacruz/hledger-vis
-hledger vis
+* [hledger] is required. See [hledger downloads](http://hledger.org/download.html) for more info on how to install it in other platforms.
+
+  ```sh
+  apt-get install hledger  # debian/ubuntu
+  brew install hledger     # osx
 ```
--->
+
+* Install hledger-vis.
+
+  > *No release yet; see [dev setup](#dev-setup) below on how to install it.*
+
+  <!--
+  ```sh
+  npm install -g @rstacruz/hledger-vis
+  hledger vis
+  ```
+  -->
+
+* Run hledger-vis. This will open a browser.
+
+  ```sh
+  hledger vis
+  ```
+
+* You may also pass arguments that will be passed to `hledger`. These will affect all views in hledger-vis (see `hledger vis --help`).
+
+  ```sh
+  hledger vis -f file.ledger
+  hledger vis --cost --date2
+  ```
 
 ## Dev setup
 
@@ -45,3 +68,4 @@ Authored and maintained by Rico Sta. Cruz with help from contributors ([list][co
 
 [MIT]: http://mit-license.org/
 [contributors]: http://github.com/rstacruz/hledger-vis/contributors
+[hledger]: http://hledger.org/

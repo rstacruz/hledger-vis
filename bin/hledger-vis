@@ -38,14 +38,13 @@ const PASSTHRU = {
 }
 
 const cli = require('meow')(`
-  Usage:
-    $ hledger-vis
+    hledger vis [OPTIONS]
 
-  Options:
+  Flags:
     -p --port=PORT               port number
        --no-open                 don't open in the browser
 
-  Passthru options:
+  General hledger flags:
     -f --file=FILE               use a different input file. For stdin, use -
        --rules-file=RFILE        CSV conversion rules file (default:
                                  FILE.rules)
@@ -67,8 +66,9 @@ const cli = require('meow')(`
     -B --cost                    show amounts in their cost price's commodity
 
   Other options:
+    -D --debug                   enable debug mode
     -h --help                    show usage information
-    -v --version                 print version info and exit
+    -v --version                 show version info
 `, {
   boolean:
     ['help', 'version', 'open', 'debug']
