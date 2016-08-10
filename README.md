@@ -4,10 +4,13 @@
 
 ## Usage
 
+No release yet; see [dev setup](#dev-setup) below.
+<!--
 ```sh
 npm install -g @rstacruz/hledger-vis
 hledger vis
 ```
+-->
 
 ## Dev setup
 
