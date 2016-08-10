@@ -1,31 +1,99 @@
 #!/usr/bin/env node
 const chalk = require('chalk')
+const stringifyOptions = require('../lib/helpers/stringify_options')
+
+const PASSTHRU = {
+  boolean: [
+    'ignore-assertions',
+    'cleared',
+    'pending',
+    'date2',
+    'uncleared',
+    'real',
+    'cost',
+    'empty'
+  ],
+  string: [
+    'file',
+    'begin',
+    'end',
+    'rules-file',
+    'alias',
+    'period',
+    'depth',
+  ],
+  alias: {
+    'aux-date': 'date2',
+    'f': 'file',
+    'C': 'cleared',
+    'U': 'uncleared',
+    'R': 'real',
+    'B': 'cost',
+    'E': 'empty',
+    'b': 'begin',
+    'e': 'end',
+    'p': 'period'
+  }
+}
+
 const cli = require('meow')(`
   Usage:
     $ hledger-vis
 
   Options:
-    -p, --port=PORT  port number
-        --no-open    don't open in the browser
-    -f, --file=FILE  file to load
+    -p --port=PORT               port number
+       --no-open                 don't open in the browser
+
+  Passthru options:
+    -f --file=FILE               use a different input file. For stdin, use -
+       --rules-file=RFILE        CSV conversion rules file (default:
+                                 FILE.rules)
+       --alias=OLD=NEW           display accounts named OLD as NEW
+       --ignore-assertions       ignore any balance assertions in the journal
+    -b --begin=DATE              include postings/txns on or after this date
+    -e --end=DATE                include postings/txns before this date
+    -p --period=PERIODEXP        set start date, end date, and/or reporting
+                                 interval all at once (overrides the flags above)
+       --date2 --aux-date        use postings/txns' secondary dates instead
+    -C --cleared                 include only cleared postings/txns
+       --pending                 include only pending postings/txns
+    -U --uncleared               include only uncleared (and pending)
+                                 postings/txns
+    -R --real                    include only non-virtual postings
+       --depth=N                 hide accounts/postings deeper than N
+    -E --empty                   show empty/zero things which are normally
+                                 omitted
+    -B --cost                    show amounts in their cost price's commodity
 
   Other options:
-    -h, --help       show usage information
-    -v, --version    print version info and exit
+    -h --help                    show usage information
+    -v --version                 print version info and exit
 `, {
-  boolean: ['help', 'version', 'open'],
-  string: ['port', 'file'],
-  alias: {
-    h: 'help', v: 'version', p: 'port', f: 'file'
-  },
+  boolean:
+    ['help', 'version', 'open', 'debug']
+    .concat(PASSTHRU.boolean),
+  string:
+    ['port']
+    .concat(PASSTHRU.string),
+  alias:
+    Object.assign({}, {
+      h: 'help', v: 'version', D: 'debug'
+    }, PASSTHRU.alias),
   default: {
     open: true
   }
 })
 
+if (cli.flags.debug) {
+  process.env.DEBUG =
+    (process.env.DEBUG || '') + ',hledger-vis'
+}
+
 const port = cli.flags.port || process.env['PORT'] || require('get-port')()
 
-const app = require('../lib/server')()
+const app = require('../lib/server')({
+  options: stringifyOptions(PASSTHRU, cli.flags)
+})
 
 Promise.resolve(port)
 .then(port => {
@@ -41,4 +109,3 @@ Promise.resolve(port)
     require('open')(url)
   }
 })
-
