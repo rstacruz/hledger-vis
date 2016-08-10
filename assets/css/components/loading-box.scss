@@ -1,0 +1,11 @@
+.loading-box {
+  & {
+    padding: 48px;
+    text-align: center;
+  }
+
+  > .label {
+    margin-left: 16px;
+    color: $gray-text;
+  }
+}

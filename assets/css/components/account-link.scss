@@ -40,10 +40,13 @@
   }
 }
 
-.account-link.-level-3 {
-  > .label:before {
-    content: '-';
+.account-link.-level-3,
+.account-link.-level-4,
+.account-link.-level-5 {
+  > .label::before {
+    content: '—';
+    color: $gray-text;
+    opacity: .25;
     margin-right: .5em;
   }
 }
-
