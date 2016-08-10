@@ -66,7 +66,7 @@ const cli = require('meow')(`
     -B --cost                    show amounts in their cost price's commodity
 
   Other options:
-    -D --debug                   enable debug mode
+       --debug                   enable debug mode
     -h --help                    show usage information
     -v --version                 show version info
 `, {
@@ -78,7 +78,7 @@ const cli = require('meow')(`
     .concat(PASSTHRU.string),
   alias:
     Object.assign({}, {
-      h: 'help', v: 'version', D: 'debug'
+      h: 'help', v: 'version'
     }, PASSTHRU.alias),
   default: {
     open: true

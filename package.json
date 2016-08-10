@@ -93,7 +93,7 @@
     "build:js": "browserify $npm_package_config_bfy_options app/index.js | uglifyjs -cm > public/assets/script.js",
     "prepublish": "run-s -s build",
     "start": "run-p -sl watch:app watch:js watch:css",
-    "test": "tape test/**/*.js",
+    "test": "tape test/**/*.js modules/*/test.js",
     "watch:app": "env DEBUG=\"hledger-vis,hledger-vis:*\" nodemon -q --exec \"node bin/hledger-vis --no-open --port ${PORT:=3000}\"",
     "watch:css": "nodemon -q --exec \"run-s -s build:css && ls -la public/assets/style.css\" -e scss",
     "watch:js": "watchify -v $npm_package_config_bfy_options app/index.js -o public/assets/script.js"
