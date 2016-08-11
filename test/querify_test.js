@@ -7,13 +7,13 @@ test('querify', t => {
     t.deepEqual(querify.apply(null, input), output, JSON.stringify(input))
   }
 
-  run(['bal'], 'bal')
-  run(['bal --real'], 'bal --real')
-  run(['--real bal'], 'bal --real')
-  run(['--real', 'bal'], 'bal --real')
-  run(['--real', 'bal --cleared'], 'bal --real --cleared')
-  run(['--real', ['bal', '--cleared']], 'bal --real --cleared')
-  run(['bal', ['Expenses:Cash expenses']], "bal 'Expenses:Cash expenses'")
+  run(['bal'], 'balance')
+  run(['bal --real'], 'balance --real')
+  run(['--real bal'], 'balance --real')
+  run(['--real', 'bal'], 'balance --real')
+  run(['--real', 'bal --cleared'], 'balance --real --cleared')
+  run(['--real', ['bal', '--cleared']], 'balance --real --cleared')
+  run(['bal', ['Expenses:Cash expenses']], "balance 'Expenses:Cash expenses'")
 
   t.end()
 })
