@@ -12,8 +12,8 @@ test('querify', t => {
   run(['--real bal'], 'balance --real')
   run(['--real', 'bal'], 'balance --real')
   run(['--real', 'bal --cleared'], 'balance --real --cleared')
-  // run(['--real', ['bal', '--cleared']], 'balance --real --cleared')
-  // run(['bal', ['Expenses:Cash expenses']], "balance 'Expenses:Cash expenses'")
+  run(['--real', ['bal', '--cleared']], 'balance --real --cleared')
+  run(['bal', ['Expenses:Cash expenses']], "balance 'Expenses:Cash expenses'")
 
   t.end()
 })

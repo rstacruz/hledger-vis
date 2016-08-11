@@ -119,7 +119,8 @@ var COMMAND_ALIASES = {
  */
 
 function parse (str) {
-  var args = rminimist(split(str), OPTIONS)
+  var argv = typeof str === 'string' ? split(str) : str
+  var args = rminimist(argv, OPTIONS)
 
   // Extract `command`
   args.command = normalizeCommand(args._[0])
@@ -204,12 +205,13 @@ function toString (flags) {
 
 function parseMany () {
   var args = []
+
   for (var i = 0, len = arguments.length; i < len; i++) {
     var argument = arguments[i]
     if (typeof argument === 'string') {
       args.push(argument)
     } else if (Array.isArray(argument)) {
-      args.push(split(argument))
+      args.push(join(argument))
     }
   }
 

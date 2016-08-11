@@ -41,7 +41,8 @@
     "koa-views": "4.1.0",
     "meow": "3.7.0",
     "open": "0.0.5",
-    "qs": "6.2.1"
+    "qs": "6.2.1",
+    "rminimist": "1.1.0"
   },
   "devDependencies": {
     "autoprefixer": "6.4.0",
