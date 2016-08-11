@@ -1,4 +1,4 @@
-var minimist = require('minimist')
+var rminimist = require('rminimist')
 var split = require('shell-quote').parse
 var join = require('shell-quote').quote
 
@@ -70,7 +70,6 @@ var OPTIONS = {
     'V': 'value',
   },
 
-  // Not passed to minimist, but used to array-ify certain keys
   'array': [
     'alias'
   ]
@@ -120,17 +119,7 @@ var COMMAND_ALIASES = {
  */
 
 function parse (str) {
-  var args = minimist(split(str), {
-    boolean: OPTIONS.boolean,
-    string: OPTIONS.string,
-    default: OPTIONS.default,
-    alias: OPTIONS.alias
-  })
-
-  // Remove aliases
-  Object.keys(OPTIONS.alias).forEach(function (alias) {
-    if (args.hasOwnProperty(alias)) delete args[alias]
-  })
+  var args = rminimist(split(str), OPTIONS)
 
   // Extract `command`
   args.command = normalizeCommand(args._[0])

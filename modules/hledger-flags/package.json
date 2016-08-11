@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "minimist": "1.2.0",
+    "rminimist": "1.0.1",
     "shell-quote": "1.6.1"
   }
 }
