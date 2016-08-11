@@ -63,6 +63,7 @@
     "redux": "3.5.2",
     "redux-thunk": "2.1.0",
     "riot-route": "2.4.0",
+    "s-date": "1.2.0",
     "shell-quote": "1.6.1",
     "tape": "4.6.0",
     "tape-watch": "2.1.0",

@@ -1,0 +1,755 @@
+2012/01/01 * Monthly salary
+  Assets:Savings  $ 1800
+  Income:Salary
+
+2012/02/01 * Monthly salary
+  Assets:Savings  $ 1800
+  Income:Salary
+
+2012/03/03 * Monthly salary
+  Assets:Savings  $ 1800
+  Income:Salary
+
+2012/04/03 * Monthly salary
+  Assets:Savings  $ 1800
+  Income:Salary
+
+2012/05/04 * Monthly salary
+  Assets:Savings  $ 1800
+  Income:Salary
+
+2012/06/04 * Monthly salary
+  Assets:Savings  $ 1800
+  Income:Salary
+
+2012/07/05 * Monthly salary
+  Assets:Savings  $ 1800
+  Income:Salary
+
+2012/08/05 * Monthly salary
+  Assets:Savings  $ 1800
+  Income:Salary
+
+2012/09/05 * Monthly salary
+  Assets:Savings  $ 1800
+  Income:Salary
+
+2012/10/06 * Monthly salary
+  Assets:Savings  $ 1800
+  Income:Salary
+
+2012/11/06 * Monthly salary
+  Assets:Savings  $ 1800
+  Income:Salary
+
+2012/12/07 * Monthly salary
+  Assets:Savings  $ 1800
+  Income:Salary
+
+2012/01/13 * Rent payment
+  Expenses:Rent  $ 800
+  Assets:Savings
+
+2012/02/13 * Rent payment
+  Expenses:Rent  $ 800
+  Assets:Savings
+
+2012/03/15 * Rent payment
+  Expenses:Rent  $ 800
+  Assets:Savings
+
+2012/04/15 * Rent payment
+  Expenses:Rent  $ 800
+  Assets:Savings
+
+2012/05/16 * Rent payment
+  Expenses:Rent  $ 800
+  Assets:Savings
+
+2012/06/16 * Rent payment
+  Expenses:Rent  $ 800
+  Assets:Savings
+
+2012/07/17 * Rent payment
+  Expenses:Rent  $ 800
+  Assets:Savings
+
+2012/08/17 * Rent payment
+  Expenses:Rent  $ 800
+  Assets:Savings
+
+2012/09/17 * Rent payment
+  Expenses:Rent  $ 800
+  Assets:Savings
+
+2012/10/18 * Rent payment
+  Expenses:Rent  $ 800
+  Assets:Savings
+
+2012/11/18 * Rent payment
+  Expenses:Rent  $ 800
+  Assets:Savings
+
+2012/12/19 * Rent payment
+  Expenses:Rent  $ 800
+  Assets:Savings
+
+2012/01/01 * McDonalds
+  Expenses:Dining  $ 28.33
+  Assets:Cash
+
+2012/01/08 * Burger King
+  Expenses:Dining  $ 22.63
+  Assets:Cash
+
+2012/01/10 * KFC
+  Expenses:Dining  $ 25.48
+  Assets:Cash
+
+2012/01/12 * McDonalds
+  Expenses:Dining  $ 17.44
+  Assets:Cash
+
+2012/01/21 * McDonalds
+  Expenses:Dining  $ 12.86
+  Assets:Cash
+
+2012/01/30 * McDonalds
+  Expenses:Dining  $ 19.66
+  Assets:Cash
+
+2012/02/06 * Burger King
+  Expenses:Dining  $ 12.16
+  Assets:Cash
+
+2012/02/08 * McDonalds
+  Expenses:Dining  $ 19.93
+  Assets:Cash
+
+2012/02/09 * Burger King
+  Expenses:Dining  $ 15.87
+  Assets:Cash
+
+2012/02/13 * McDonalds
+  Expenses:Dining  $ 22.16
+  Assets:Cash
+
+2012/02/20 * McDonalds
+  Expenses:Dining  $ 10.93
+  Assets:Cash
+
+2012/02/28 * McDonalds
+  Expenses:Dining  $ 24.78
+  Assets:Cash
+
+2012/03/04 * McDonalds
+  Expenses:Dining  $ 10.88
+  Assets:Cash
+
+2012/03/10 * McDonalds
+  Expenses:Dining  $ 24.67
+  Assets:Cash
+
+2012/03/13 * KFC
+  Expenses:Dining  $ 10.22
+  Assets:Cash
+
+2012/03/18 * McDonalds
+  Expenses:Dining  $ 23.43
+  Assets:Cash
+
+2012/03/27 * Burger King
+  Expenses:Dining  $ 23.60
+  Assets:Cash
+
+2012/04/01 * Burger King
+  Expenses:Dining  $ 18.13
+  Assets:Cash
+
+2012/04/10 * McDonalds
+  Expenses:Dining  $ 11.80
+  Assets:Cash
+
+2012/04/17 * McDonalds
+  Expenses:Dining  $ 24.46
+  Assets:Cash
+
+2012/04/22 * McDonalds
+  Expenses:Dining  $ 21.18
+  Assets:Cash
+
+2012/04/28 * Burger King
+  Expenses:Dining  $ 21.68
+  Assets:Cash
+
+2012/05/02 * KFC
+  Expenses:Dining  $ 14.71
+  Assets:Cash
+
+2012/05/11 * Burger King
+  Expenses:Dining  $ 19.68
+  Assets:Cash
+
+2012/05/13 * Burger King
+  Expenses:Dining  $ 24.21
+  Assets:Cash
+
+2012/05/14 * KFC
+  Expenses:Dining  $ 25.82
+  Assets:Cash
+
+2012/05/22 * McDonalds
+  Expenses:Dining  $ 13.60
+  Assets:Cash
+
+2012/05/30 * KFC
+  Expenses:Dining  $ 18.97
+  Assets:Cash
+
+2012/06/02 * KFC
+  Expenses:Dining  $ 16.68
+  Assets:Cash
+
+2012/06/08 * KFC
+  Expenses:Dining  $ 11.34
+  Assets:Cash
+
+2012/06/17 * KFC
+  Expenses:Dining  $ 11.29
+  Assets:Cash
+
+2012/06/25 * Burger King
+  Expenses:Dining  $ 28.69
+  Assets:Cash
+
+2012/06/29 * Burger King
+  Expenses:Dining  $ 11.17
+  Assets:Cash
+
+2012/07/04 * Burger King
+  Expenses:Dining  $ 29.89
+  Assets:Cash
+
+2012/07/11 * McDonalds
+  Expenses:Dining  $ 17.66
+  Assets:Cash
+
+2012/07/19 * McDonalds
+  Expenses:Dining  $ 15.49
+  Assets:Cash
+
+2012/07/27 * McDonalds
+  Expenses:Dining  $ 20.52
+  Assets:Cash
+
+2012/07/28 * McDonalds
+  Expenses:Dining  $ 21.79
+  Assets:Cash
+
+2012/08/03 * McDonalds
+  Expenses:Dining  $ 18.20
+  Assets:Cash
+
+2012/08/05 * McDonalds
+  Expenses:Dining  $ 20.24
+  Assets:Cash
+
+2012/08/13 * Burger King
+  Expenses:Dining  $ 29.95
+  Assets:Cash
+
+2012/08/21 * McDonalds
+  Expenses:Dining  $ 22.50
+  Assets:Cash
+
+2012/08/29 * KFC
+  Expenses:Dining  $ 27.66
+  Assets:Cash
+
+2012/09/07 * McDonalds
+  Expenses:Dining  $ 14.90
+  Assets:Cash
+
+2012/09/12 * McDonalds
+  Expenses:Dining  $ 10.50
+  Assets:Cash
+
+2012/09/15 * McDonalds
+  Expenses:Dining  $ 25.98
+  Assets:Cash
+
+2012/09/23 * McDonalds
+  Expenses:Dining  $ 19.36
+  Assets:Cash
+
+2012/09/27 * Burger King
+  Expenses:Dining  $ 15.14
+  Assets:Cash
+
+2012/10/04 * McDonalds
+  Expenses:Dining  $ 15.59
+  Assets:Cash
+
+2012/10/13 * McDonalds
+  Expenses:Dining  $ 28.12
+  Assets:Cash
+
+2012/10/18 * McDonalds
+  Expenses:Dining  $ 10.93
+  Assets:Cash
+
+2012/10/25 * KFC
+  Expenses:Dining  $ 11.02
+  Assets:Cash
+
+2012/11/02 * McDonalds
+  Expenses:Dining  $ 14.58
+  Assets:Cash
+
+2012/11/08 * McDonalds
+  Expenses:Dining  $ 19.36
+  Assets:Cash
+
+2012/11/15 * McDonalds
+  Expenses:Dining  $ 13.62
+  Assets:Cash
+
+2012/11/24 * McDonalds
+  Expenses:Dining  $ 23.34
+  Assets:Cash
+
+2012/12/02 * McDonalds
+  Expenses:Dining  $ 14.80
+  Assets:Cash
+
+2012/12/04 * McDonalds
+  Expenses:Dining  $ 27.87
+  Assets:Cash
+
+2012/12/11 * Burger King
+  Expenses:Dining  $ 27.70
+  Assets:Cash
+
+2012/12/17 * McDonalds
+  Expenses:Dining  $ 12.22
+  Assets:Cash
+
+2012/12/19 * McDonalds
+  Expenses:Dining  $ 24.63
+  Assets:Cash
+
+2012/12/27 * KFC
+  Expenses:Dining  $ 24.79
+  Assets:Cash
+
+2012/01/01 * Walmart
+  Expenses:Grocery  $ 46.56
+  Assets:Cash
+
+2012/01/08 * Target
+  Expenses:Grocery  $ 55.65
+  Assets:Cash
+
+2012/01/16 * Walmart
+  Expenses:Grocery  $ 55.42
+  Assets:Cash
+
+2012/01/30 * Walmart
+  Expenses:Grocery  $ 51.45
+  Assets:Cash
+
+2012/02/08 * Walmart
+  Expenses:Grocery  $ 31.06
+  Assets:Cash
+
+2012/02/18 * Walmart
+  Expenses:Grocery  $ 60.69
+  Assets:Cash
+
+2012/02/23 * Target
+  Expenses:Grocery  $ 58.50
+  Assets:Cash
+
+2012/03/07 * Walmart
+  Expenses:Grocery  $ 45.09
+  Assets:Cash
+
+2012/03/16 * Walmart
+  Expenses:Grocery  $ 69.41
+  Assets:Cash
+
+2012/03/22 * Walmart
+  Expenses:Grocery  $ 46.33
+  Assets:Cash
+
+2012/04/02 * Target
+  Expenses:Grocery  $ 66.60
+  Assets:Cash
+
+2012/04/15 * Target
+  Expenses:Grocery  $ 34.08
+  Assets:Cash
+
+2012/04/27 * Target
+  Expenses:Grocery  $ 61.79
+  Assets:Cash
+
+2012/05/04 * Target
+  Expenses:Grocery  $ 33.21
+  Assets:Cash
+
+2012/05/10 * Target
+  Expenses:Grocery  $ 67.71
+  Assets:Cash
+
+2012/05/24 * Target
+  Expenses:Grocery  $ 54.07
+  Assets:Cash
+
+2012/06/01 * Walmart
+  Expenses:Grocery  $ 51.46
+  Assets:Cash
+
+2012/06/07 * Target
+  Expenses:Grocery  $ 36.08
+  Assets:Cash
+
+2012/06/21 * Target
+  Expenses:Grocery  $ 49.39
+  Assets:Cash
+
+2012/06/28 * Walmart
+  Expenses:Grocery  $ 56.75
+  Assets:Cash
+
+2012/07/11 * Target
+  Expenses:Grocery  $ 32.17
+  Assets:Cash
+
+2012/07/20 * Walmart
+  Expenses:Grocery  $ 45.96
+  Assets:Cash
+
+2012/08/03 * Target
+  Expenses:Grocery  $ 64.34
+  Assets:Cash
+
+2012/08/11 * Target
+  Expenses:Grocery  $ 55.58
+  Assets:Cash
+
+2012/08/19 * Target
+  Expenses:Grocery  $ 52.48
+  Assets:Cash
+
+2012/09/02 * Walmart
+  Expenses:Grocery  $ 32.60
+  Assets:Cash
+
+2012/09/10 * Target
+  Expenses:Grocery  $ 46.56
+  Assets:Cash
+
+2012/09/24 * Target
+  Expenses:Grocery  $ 38.97
+  Assets:Cash
+
+2012/10/07 * Target
+  Expenses:Grocery  $ 30.01
+  Assets:Cash
+
+2012/10/13 * Target
+  Expenses:Grocery  $ 54.45
+  Assets:Cash
+
+2012/10/21 * Walmart
+  Expenses:Grocery  $ 35.37
+  Assets:Cash
+
+2012/10/26 * Target
+  Expenses:Grocery  $ 34.34
+  Assets:Cash
+
+2012/11/04 * Walmart
+  Expenses:Grocery  $ 55.73
+  Assets:Cash
+
+2012/11/10 * Target
+  Expenses:Grocery  $ 51.51
+  Assets:Cash
+
+2012/11/22 * Target
+  Expenses:Grocery  $ 30.03
+  Assets:Cash
+
+2012/11/28 * Walmart
+  Expenses:Grocery  $ 38.36
+  Assets:Cash
+
+2012/12/10 * Walmart
+  Expenses:Grocery  $ 56.55
+  Assets:Cash
+
+2012/12/24 * Walmart
+  Expenses:Grocery  $ 40.95
+  Assets:Cash
+
+2012/01/16 * Power bill
+  Expenses:Power  $ 63.54
+  Assets:Savings
+
+2012/02/14 * Power bill
+  Expenses:Power  $ 64.87
+  Assets:Savings
+
+2012/03/15 * Power bill
+  Expenses:Power  $ 58.18
+  Assets:Savings
+
+2012/04/15 * Power bill
+  Expenses:Power  $ 60.86
+  Assets:Savings
+
+2012/05/14 * Power bill
+  Expenses:Power  $ 50.81
+  Assets:Savings
+
+2012/06/11 * Power bill
+  Expenses:Power  $ 58.85
+  Assets:Savings
+
+2012/07/09 * Power bill
+  Expenses:Power  $ 62.81
+  Assets:Savings
+
+2012/08/09 * Power bill
+  Expenses:Power  $ 65.50
+  Assets:Savings
+
+2012/09/06 * Power bill
+  Expenses:Power  $ 66.63
+  Assets:Savings
+
+2012/10/04 * Power bill
+  Expenses:Power  $ 69.78
+  Assets:Savings
+
+2012/11/02 * Power bill
+  Expenses:Power  $ 53.27
+  Assets:Savings
+
+2012/12/02 * Power bill
+  Expenses:Power  $ 61.47
+  Assets:Savings
+
+2012/01/16 * Phone service
+  Expenses:Phone  $ 58.13
+  Assets:Savings
+
+2012/02/14 * Phone service
+  Expenses:Phone  $ 68.63
+  Assets:Savings
+
+2012/03/15 * Phone service
+  Expenses:Phone  $ 63.16
+  Assets:Savings
+
+2012/04/15 * Phone service
+  Expenses:Phone  $ 64.41
+  Assets:Savings
+
+2012/05/13 * Phone service
+  Expenses:Phone  $ 52.13
+  Assets:Savings
+
+2012/06/10 * Phone service
+  Expenses:Phone  $ 62.81
+  Assets:Savings
+
+2012/07/09 * Phone service
+  Expenses:Phone  $ 54.29
+  Assets:Savings
+
+2012/08/06 * Phone service
+  Expenses:Phone  $ 57.58
+  Assets:Savings
+
+2012/09/05 * Phone service
+  Expenses:Phone  $ 52.02
+  Assets:Savings
+
+2012/10/03 * Phone service
+  Expenses:Phone  $ 69.10
+  Assets:Savings
+
+2012/11/01 * Phone service
+  Expenses:Phone  $ 67.65
+  Assets:Savings
+
+2012/11/30 * Phone service
+  Expenses:Phone  $ 60.23
+  Assets:Savings
+
+2012/12/30 * Phone service
+  Expenses:Phone  $ 67.88
+  Assets:Savings
+
+2012/01/01 * ATM withdrawal
+  Assets:Cash  $ 123.74
+  Assets:Savings
+
+2012/01/12 * ATM withdrawal
+  Assets:Cash  $ 121.43
+  Assets:Savings
+
+2012/01/19 * ATM withdrawal
+  Assets:Cash  $ 106.46
+  Assets:Savings
+
+2012/01/25 * ATM withdrawal
+  Assets:Cash  $ 133.38
+  Assets:Savings
+
+2012/02/03 * ATM withdrawal
+  Assets:Cash  $ 132.72
+  Assets:Savings
+
+2012/02/11 * ATM withdrawal
+  Assets:Cash  $ 121.41
+  Assets:Savings
+
+2012/02/22 * ATM withdrawal
+  Assets:Cash  $ 135.22
+  Assets:Savings
+
+2012/03/03 * ATM withdrawal
+  Assets:Cash  $ 72.66
+  Assets:Savings
+
+2012/03/10 * ATM withdrawal
+  Assets:Cash  $ 82.14
+  Assets:Savings
+
+2012/03/22 * ATM withdrawal
+  Assets:Cash  $ 78.67
+  Assets:Savings
+
+2012/04/01 * ATM withdrawal
+  Assets:Cash  $ 125.12
+  Assets:Savings
+
+2012/04/11 * ATM withdrawal
+  Assets:Cash  $ 131.26
+  Assets:Savings
+
+2012/04/19 * ATM withdrawal
+  Assets:Cash  $ 126.17
+  Assets:Savings
+
+2012/04/28 * ATM withdrawal
+  Assets:Cash  $ 115.06
+  Assets:Savings
+
+2012/05/09 * ATM withdrawal
+  Assets:Cash  $ 72.84
+  Assets:Savings
+
+2012/05/17 * ATM withdrawal
+  Assets:Cash  $ 106.22
+  Assets:Savings
+
+2012/05/25 * ATM withdrawal
+  Assets:Cash  $ 84.30
+  Assets:Savings
+
+2012/06/03 * ATM withdrawal
+  Assets:Cash  $ 89.87
+  Assets:Savings
+
+2012/06/12 * ATM withdrawal
+  Assets:Cash  $ 124.75
+  Assets:Savings
+
+2012/06/21 * ATM withdrawal
+  Assets:Cash  $ 94.37
+  Assets:Savings
+
+2012/06/30 * ATM withdrawal
+  Assets:Cash  $ 72.35
+  Assets:Savings
+
+2012/07/11 * ATM withdrawal
+  Assets:Cash  $ 84.03
+  Assets:Savings
+
+2012/07/18 * ATM withdrawal
+  Assets:Cash  $ 72.04
+  Assets:Savings
+
+2012/07/27 * ATM withdrawal
+  Assets:Cash  $ 136.25
+  Assets:Savings
+
+2012/08/07 * ATM withdrawal
+  Assets:Cash  $ 98.34
+  Assets:Savings
+
+2012/08/16 * ATM withdrawal
+  Assets:Cash  $ 108.00
+  Assets:Savings
+
+2012/08/24 * ATM withdrawal
+  Assets:Cash  $ 94.68
+  Assets:Savings
+
+2012/09/02 * ATM withdrawal
+  Assets:Cash  $ 70.46
+  Assets:Savings
+
+2012/09/08 * ATM withdrawal
+  Assets:Cash  $ 116.84
+  Assets:Savings
+
+2012/09/17 * ATM withdrawal
+  Assets:Cash  $ 77.19
+  Assets:Savings
+
+2012/09/27 * ATM withdrawal
+  Assets:Cash  $ 73.97
+  Assets:Savings
+
+2012/10/08 * ATM withdrawal
+  Assets:Cash  $ 128.73
+  Assets:Savings
+
+2012/10/19 * ATM withdrawal
+  Assets:Cash  $ 138.85
+  Assets:Savings
+
+2012/10/29 * ATM withdrawal
+  Assets:Cash  $ 87.40
+  Assets:Savings
+
+2012/11/05 * ATM withdrawal
+  Assets:Cash  $ 102.06
+  Assets:Savings
+
+2012/11/17 * ATM withdrawal
+  Assets:Cash  $ 104.37
+  Assets:Savings
+
+2012/11/25 * ATM withdrawal
+  Assets:Cash  $ 89.66
+  Assets:Savings
+
+2012/12/05 * ATM withdrawal
+  Assets:Cash  $ 108.94
+  Assets:Savings
+
+2012/12/15 * ATM withdrawal
+  Assets:Cash  $ 147.17
+  Assets:Savings
+
+2012/12/26 * ATM withdrawal
+  Assets:Cash  $ 125.20
+  Assets:Savings
