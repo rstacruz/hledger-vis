@@ -4,9 +4,18 @@ const sdate = require('s-date')
 
 var result = []
 
-var FROM = new Date('2012-01-01')
-var TO = new Date('2013-01-01')
-var DAYS = 86400 * 1000
+const FROM = new Date('2012-01-01')
+const TO = new Date('2013-01-01')
+const DAYS = 86400 * 1000
+const RESTAURANTS = [
+  'KFC', 'McDonalds', 'Burger King', 'IHOP',
+  'Jack\'s BBQ and Grill', 'Kanto Freestyle Breakfast',
+  'Smile Elephant Thai Cuisine', 'Cafe Juanita', 'Silantro Mexican Cafe',
+  'Gustoso\'s Peri-Peri', 'Poco Deli', 'Pitmaster\'s Smokehouse',
+  'Eleven Tables', 'St. Patrick\'s', 'Charlie\'s Grind and Grill',
+  'Wooden Spoon', 'Tomahawk Chops & Grill', 'Mad Mark\'s Creamery',
+  'The Round Table'
+]
 
 push(result, {
   date: ['dates', {
@@ -41,7 +50,7 @@ push(result, {
   from: 'Assets:Cash',
   to: 'Expenses:Dining',
   amount: ['amount', {from: 10.00, to: 30.00}],
-  description: ['sample', ['KFC', 'McDonalds', 'Burger King']]
+  description: ['sample', RESTAURANTS]
 })
 
 push(result, {
