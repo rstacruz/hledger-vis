@@ -36,6 +36,20 @@ function quote (str) {
   }
 }
 
+/*
+ * Category
+ *
+ *     > toQuery('assets')
+ *     'historical'
+ *
+ *     > toQuery('expenses')
+ *     'average'
+ */
+
+function category (query) {
+  
+}
+
 module.exports = {
   toString
 }

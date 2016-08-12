@@ -1,8 +1,11 @@
 import { element, dom } from 'decca'
 import AppRoot from './components/app_root'
-import getMeta from './helpers/get_meta'
-import route from 'riot-route'
-import { init, fetchData } from './actions'
+import Router from './services/router'
+import { init } from './actions'
+
+/*
+ * Fire up the store and start the services
+ */
 
 var store = require('./store')()
 global.Store = store
@@ -13,7 +16,8 @@ Router(store)
 store.dispatch(init())
 
 /*
- * DOM service
+ * DOM service:
+ * listens to the store and updates the DOM via decca
  */
 
 function DOM (store) {
@@ -26,28 +30,4 @@ function DOM (store) {
 
   store.subscribe(update)
   update()
-}
-
-/*
- * Router service.
- *
- * Listens to `window.location.history` and dispatches stuff.
- */
-
-function Router (store) {
-  route('/..', name => {
-    const query = require('qs').parse(window.location.search.slice(1))
-    store.dispatch({ type: 'navigate', query })
-
-    // Use `reg --related` if it's an account
-    // If it's not (eg, `desc:baguio`), use `print`
-    store.dispatch(fetchData({
-      q: 'reg --related ' + query.q,
-      mode: 'csv',
-      key: 'register'
-    }))
-  })
-
-  route.base('/')
-  route.start(true)
 }

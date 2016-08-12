@@ -8,7 +8,7 @@ function render ({ props }) {
 
   return <div class='basic-component'>
     <div class='component-header'>
-      <h2>Journal</h2>
+      <h2>Monthly report</h2>
     </div>
     {loader(data) || <List {...props} />}
   </div>
@@ -18,7 +18,7 @@ function List ({ props }) {
   const {data} = props
   const head = data.slice(0, 1)
   const body = data.slice(1)
-  return <div class='register-list _fadein'>
+  return <div class='rollup-list _fadein'>
     <table class='register-table'>
       <thead>
         {map(head, row =>
@@ -28,7 +28,7 @@ function List ({ props }) {
         )}
       </thead>
       <tbody>
-        {map(reverse(body), row =>
+        {map(body, row =>
           <tr>
             {map(row, cell => <td>{cell}</td>)}
           </tr>

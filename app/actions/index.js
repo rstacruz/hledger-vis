@@ -1,10 +1,11 @@
 import { stringify } from 'qs'
-import buildPath from '../helpers/build_path'
 import fetch from 'isomorphic-fetch'
-import checkStatus from '../helpers/check_status'
-import { toString } from '../accessors/context'
 import get from 'lodash/get'
 import route from 'riot-route'
+
+import buildPath from '../helpers/build_path'
+import checkStatus from '../helpers/check_status'
+import { toString } from '../accessors/context'
 
 /**
  * Fetches ledger data into a given key.
@@ -51,14 +52,7 @@ function init () {
 }
 
 function fixBalance (bal) {
-  bal = bal.slice(1) // Remove CSV header
-
-  // bal = bal.reduce((acc, item) => {
-  //   acc.push(item)
-  //   return acc
-  // }, [])
-
-  return bal
+  return bal.slice(1) // Remove CSV header
 }
 
 /*

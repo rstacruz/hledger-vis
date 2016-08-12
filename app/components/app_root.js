@@ -2,6 +2,7 @@ import { element } from 'decca'
 import get from 'lodash/get'
 import AccountsList from './accounts_list'
 import RegisterList from './register_list'
+import Rollup from './rollup'
 import { navigate } from '../actions'
 
 function render ({ props, dispatch }) {
@@ -23,7 +24,8 @@ function render ({ props, dispatch }) {
       <AccountsList balance={get(state, 'balance')} />
     </div>
     <div class='body'>
-      <RegisterList register={get(state, 'register')} />
+      <Rollup data={get(state, 'rollup')} />
+      <RegisterList data={get(state, 'register')} />
     </div>
   </div>
 }

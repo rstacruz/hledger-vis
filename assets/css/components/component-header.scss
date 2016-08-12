@@ -1,0 +1,14 @@
+.component-header {
+  margin-bottom: 16px;
+
+  > h2 {
+    font-size: $fs1;
+    font-weight: normal;
+    color: $primary;
+
+    margin: 0;
+    padding: 0;
+    padding-bottom: 16px;
+    border-bottom: solid 1px $line-color;
+  }
+}
