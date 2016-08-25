@@ -1,6 +1,5 @@
 import { stringify } from 'qs'
 import fetch from 'isomorphic-fetch'
-import get from 'lodash/get'
 import route from 'riot-route'
 
 import buildPath from '../helpers/build_path'

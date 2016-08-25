@@ -1,4 +1,4 @@
-import get from 'lodash/get'
+import get from '101/pluck'
 import { stringify } from 'qs'
 
 /**

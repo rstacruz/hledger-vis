@@ -1,5 +1,5 @@
 import { element } from 'decca'
-import get from 'lodash/get'
+import get from '101/pluck'
 import AccountsList from './accounts_list'
 import RegisterList from './register_list'
 import Rollup from './rollup'

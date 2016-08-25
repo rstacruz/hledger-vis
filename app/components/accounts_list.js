@@ -1,5 +1,5 @@
 import { element } from 'decca'
-import map from 'lodash/map'
+import map from 'object-loops/map'
 import reroute from '../helpers/reroute'
 import buildPath from '../helpers/build_path'
 import loader from '../helpers/loader'

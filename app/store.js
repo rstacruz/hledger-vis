@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import fetch from 'isomorphic-fetch'
-import set from 'lodash/set'
+import set from '101/put'
 import thunk from 'redux-thunk'
 
 /*
@@ -21,30 +21,30 @@ var reducers = {
   // Updates the navigation
   'navigate' (state, {query}) {
     // query == { q, base, start... }
-    state = set(state, ['context'], query)
+    state = set(state, 'context', query)
     return state
   },
 
   // Bootstrap data
   'accounts:init' (state, {payload}) {
-    state = set(state, ['accounts'], payload)
+    state = set(state, 'accounts', payload)
     return state
   },
 
   'fetch:start' (state, {key}) {
-    state = set(state, [key], {})
-    state = set(state, [key, '_pending'], true)
+    state = set(state, key, {})
+    state = set(state, `${key}._pending`, true)
     return state
   },
 
   'fetch:done' (state, {key, payload}) {
-    state = set(state, [key], payload)
+    state = set(state, key, payload)
     return state
   },
 
   'fetch:error' (state, {key, error}) {
-    state = set(state, [key], {})
-    state = set(state, [key, '_error'], error)
+    state = set(state, key, {})
+    state = set(state, `${key}._error`, error)
     return state
   }
 }

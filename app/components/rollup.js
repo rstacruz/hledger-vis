@@ -1,5 +1,5 @@
 import { element } from 'decca'
-import map from 'lodash/map'
+import map from 'object-loops/map'
 import reverse from 'lodash/fp/reverse'
 import loader from '../helpers/loader'
 
