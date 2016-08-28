@@ -45,7 +45,7 @@
     "object-loops": "0.8.0",
     "open": "0.0.5",
     "qs": "6.2.1",
-    "rminimist": "1.1.0"
+    "rminimist": "1.0.1"
   },
   "devDependencies": {
     "autoprefixer": "6.4.0",
